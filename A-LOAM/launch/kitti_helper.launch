@@ -1,0 +1,17 @@
+<!-- Notes：   Liu Guangzu            LGZ9763@163.com -->
+<launch>
+    
+
+    <node name="kittiHelper" pkg="aloam_velodyne" type="kittiHelper" output="screen"> 
+        <!-- 设置文件所在位置 -->
+        <param name="dataset_folder" type="string" value="/home/lgz/Study/ROS/LOAM/src/A-LOAM/data/" />
+        <!-- 设置数据集内部包名 -->
+        <param name="sequence_number" type="string" value="00" />
+        <!-- 设置是否输出bag包 -->
+        <param name="to_bag" type="bool" value="true" />
+        <!-- 设置输出bag包的路径 -->
+        <param name="output_bag_file" type="string" value="/home/lgz/Study/ROS/LOAM/src/A-LOAM/data/kitti.bag" /> <!-- replace with your output folder -->
+        <!-- 设置发布频率 帧率=10 / publish_delay-->
+        <param name="publish_delay" type="int" value="1" />
+    </node>
+</launch>
